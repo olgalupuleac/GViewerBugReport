@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.271
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GViewerBugReport", "GViewerBugReport\GViewerBugReport.csproj", "{B1DC1493-3ED4-413F-A89A-33B6765C7ADB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B1DC1493-3ED4-413F-A89A-33B6765C7ADB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B1DC1493-3ED4-413F-A89A-33B6765C7ADB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B1DC1493-3ED4-413F-A89A-33B6765C7ADB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B1DC1493-3ED4-413F-A89A-33B6765C7ADB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {49C78943-8232-4F79-A2CB-385606746D05}
+	EndGlobalSection
+EndGlobal
