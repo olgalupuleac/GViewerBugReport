@@ -1,19 +1,20 @@
 # Graph inside GViewer hosted in WPF doesn't appear in the custom tool window in VSIX extension
 
-I'm developing Visual Studio extension and I want to use MSAGL library for graph rendering. I'm trying to [host it in WPF](https://social.msdn.microsoft.com/Forums/office/en-US/b8b3c8bd-13ae-4ade-8b11-940aa7a39837/using-glee-with-wpf?forum=automaticgraphlayout) and add it to custom tool window, but the graph isn't displayed inside the window. 
+I'm developing Visual Studio extension for VS 2017 and I want to use MSAGL library (version 1.1.3) for graph rendering. I'm trying to [host it in WPF](https://social.msdn.microsoft.com/Forums/office/en-US/b8b3c8bd-13ae-4ade-8b11-940aa7a39837/using-glee-with-wpf?forum=automaticgraphlayout) and add it to custom tool window, but the graph isn't displayed inside the window. 
 
 To observe the bug:
 
 1. Clone the repository https://github.com/olgalupuleac/GViewerBugReport
-2. Start the experimental instance.
-3. Select *View > Other windows > GViewerToolWindow*.
-4. The window contains empty GViewer control instead of graph. 
+2. Check the prerequisites for running VSIX project https://docs.microsoft.com/en-us/visualstudio/extensibility/starting-to-develop-visual-studio-extensions?view=vs-2017
+3. Start Visual Studio experimental instance.
+4. Select *View > Other windows > GViewerToolWindow*.
+5. The window contains empty GViewer control instead of graph. 
 
 To reproduce the bug from scratch:
 
 1. Open Visual Studio
 
-2. Create VSIX project with the tool window, name it *GViewerToolWindow.cs* https://docs.microsoft.com/en-us/visualstudio/extensibility/creating-an-extension-with-a-tool-window?view=vs-2019
+2. Create VSIX project with the tool window, name it *GViewerToolWindow.cs* https://docs.microsoft.com/en-us/visualstudio/extensibility/creating-an-extension-with-a-tool-window?view=vs-2017
 
 3. Add MSAGL NuGet package
 
