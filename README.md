@@ -1,6 +1,15 @@
 # Graph inside GViewer hosted in WPF doesn't appear in the custom tool window in VSIX extension
 
-I'm developing Visual Studio extension and I want to use MSAGL library for graph rendering. I'm trying to [host it in WPF](https://social.msdn.microsoft.com/Forums/office/en-US/b8b3c8bd-13ae-4ade-8b11-940aa7a39837/using-glee-with-wpf?forum=automaticgraphlayout) and add it to custom tool window, but the graph isn't displayed inside the window. Here are the steps to reproduce this bug.
+I'm developing Visual Studio extension and I want to use MSAGL library for graph rendering. I'm trying to [host it in WPF](https://social.msdn.microsoft.com/Forums/office/en-US/b8b3c8bd-13ae-4ade-8b11-940aa7a39837/using-glee-with-wpf?forum=automaticgraphlayout) and add it to custom tool window, but the graph isn't displayed inside the window. 
+
+To observe the bug:
+
+1. Clone the repository https://github.com/olgalupuleac/GViewerBugReport
+2. Start the experimental instance.
+3. Select *View > Other windows > GViewerToolWindow*.
+4. The window contains empty GViewer control instead of graph. 
+
+To reproduce the bug from scratch:
 
 1. Open Visual Studio
 
@@ -8,7 +17,7 @@ I'm developing Visual Studio extension and I want to use MSAGL library for graph
 
 3. Add MSAGL NuGet package
 
-4. Add these lines to *Properties/AssemblyInfo.cs*
+4. Add these code to *Properties/AssemblyInfo.cs*
 
    ```c#
    [assembly: ProvideCodeBase(CodeBase = @"$PackageFolder$\Microsoft.Msagl.GraphViewerGdi.dll")]
@@ -20,7 +29,7 @@ I'm developing Visual Studio extension and I want to use MSAGL library for graph
 
 5. Add WindowsFormsIntegration assembly reference![1561674093892](windows_forms_integration.png)
 
-6. Remove default button control from GViewerToolWindowControl.xaml and add WindowsFormsHost control named Wfh. The xaml code should be similar to 
+6. Remove default button control from *GViewerToolWindowControl.xaml* and add WindowsFormsHost control named Wfh. The xaml code should be similar to 
 
    ```xaml
    <UserControl x:Class="GViewerBugReport.GViewerToolWindowControl"
@@ -45,7 +54,7 @@ I'm developing Visual Studio extension and I want to use MSAGL library for graph
 
    
 
-7. Add this method to GViewerToolWindowControl.xaml.cs 
+7. Add this method to *GViewerToolWindowControl.xaml.cs*
 
    ```c#
    private Graph CreateGraph()
@@ -76,7 +85,7 @@ I'm developing Visual Studio extension and I want to use MSAGL library for graph
 
    
 
-9. Start Visual Studio experimental instance. Select *View/Other windows/GViewerToolWindow*. The window with GViewer doesn't contain the graph. ![1561715670642](full_view.png)
+9. Start Visual Studio experimental instance. Select *View > Other windows > GViewerToolWindow*. The window with GViewer doesn't contain the graph. ![1561715670642](full_view.png)
 
 
 
