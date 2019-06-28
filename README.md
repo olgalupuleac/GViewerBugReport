@@ -18,7 +18,7 @@ I'm developing Visual Studio extension and I want to use MSAGL library for graph
 
    
 
-5. Add WindowsFormsIntegration assembly reference![1561674093892](C:\Users\olga\source\repos\GViewerBugReport\windows_forms_integration.png)
+5. Add WindowsFormsIntegration assembly reference![1561674093892](windows_forms_integration.png)
 
 6. Remove default button control from GViewerToolWindowControl.xaml and add WindowsFormsHost control named Wfh. The xaml code should be similar to 
 
